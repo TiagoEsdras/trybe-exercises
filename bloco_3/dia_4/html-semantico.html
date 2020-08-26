@@ -4,73 +4,140 @@
     <meta charset="UTF-8" xml:lang="pt-BR" lang="pt-BR"/>
     <meta name="viewport" content="width=device-width" />
     <title>Stomatopoda</title>
-    <style>     
+    <style>
 
-      .header-title{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-align: center;       
-      }
-
-      .menu-nav-item{
-        display: inline-block;
-        padding-right: 10px;               
-      }
-
-      .menu-nav-item-text{
-        display: inline-block;        
+      *{
+        margin: 0px;
+        padding: 0px;
       }
 
       a:link{
         text-decoration:none;        
       }
 
+      body{
+        margin: 10px 100px 10px 100px;
+      }     
+
+      .menu-nav{
+        text-align: right;
+      }
+
+      .menu-nav-item{ 
+        display: inline-block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;       
+        padding-right: 10px;
+        font-size: 20px;                                   
+      }
+
+      .header-title{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 38px;
+      }    
+
+      
+
+      
+
+      
+
+      table {
+        border: 1px solid #333;
+        background-color: #fff9db;
+      }
+      thead {
+        background-color: #ffdd33;
+        color: #000000;
+      }
+
+      aside {                
+        float: right;       
+      }
+
+      
+
+      
+      
+
 
     </style>
   </head>
+
   <body>
+
     <header>
-      <nav class="menu-nav">
+
+      <nav class="menu-nav">      
+         
         <ul>
-          <li class="menu-nav-item menu-nav-item-text"><a href="#">Página Inicial</a></li>
-          <li class="menu-nav-item menu-nav-item-text"><a href="#">Sobre</a></li>
-          <li class="menu-nav-item menu-nav-item-text"><a href="#">Contato</a></li>
-        </ul>
+          <li class="menu-nav-item"><a href="#">Página Inicial</a></li>
+          <li class="menu-nav-item"><a href="#">Sobre</a></li>
+          <li class="menu-nav-item"><a href="#">Contato</a></li>
+        </ul>      
+        
+       
       </nav>
 
-      <h1 class="header-title">Soco a 80km/h: Conheça o Stomatopoda</h1>
-      
+      <h1 class="header-title">Soco a 80km/h: Conheça o Stomatopoda</h1>   
+
     </header>
+    
     <article>
-      <h2>Fatos sobre o Stomatopoda</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, excepturi sint voluptates accusamus consectetur incidunt consequuntur exercitationem quis, labore adipisci aliquam quia animi iste rem at dolore? Quam, laudantium repellat.</p>
+      <h2 >Fatos sobre o Stomatopoda</h2>
+
       <section>
+
         <h3>Descrição</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa accusantium commodi sunt, voluptatum soluta eligendi architecto quas quae ratione consectetur. Perspiciatis, quas consequatur saepe quam quisquam corrupti ex tenetur itaque!</p>
+        <p>Stomatopoda (ou estomatópode), chamados popularmente de tamarutacas ou de lacraias-do-mar no Brasil, é uma ordem de crustáceos marinhos da subclasse Hoplocarida, que agrupa cerca de 400 espécies, caracterizadas principalmente pela morfologia da segunda pata torácica, que é modificada em apêndice subquelado, lembrando uma pata de louva-a-deus.</p>
+
+        <aside>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/E0Li1k5hGBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </aside>
+        
         <table>
-          <td>Reino</td>
-          <td>Filo</td>
-          <td>Subfilo</td>
-          <td>Classe</td>
-          <td>Subclasse</td>
-          <td>Ordem</td>
+          <thead>
+            <tr>
+                <th colspan="2">Classificação Científica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reino:</td>
+              <td >Animalia</td>
+            </tr>
+            <tr>
+              <td>Filo:</td>
+              <td>Arthropoda</td>
+            </tr>
+            <tr>
+              <td>Subfilo:</td>
+              <td>Crustacea</td>
+            </tr>
+            <tr>
+              <td>Classe:</td>
+              <td>Malacostraca</td>
+            </tr>
+            <tr>
+              <td>Subclasse:</td>
+              <td>Hoplocarida</td>
+            </tr>
+            <tr>
+              <td>Ordem:</td>
+              <td>Stomatopoda</td>
+            </tr>
+          </tbody>
         </table>
-      </section>
-      <section>
-        <h3>Fato #1</h3>
-      </section>
-      <section>
-        <h3>Fato #2</h3>
-      </section>
-      <sectio>
-        <h3>Fato #3</h3>
-      </sectio>
+
+      </section>      
+         
     </article>
     <section>
       <h3>Referências Bibliográficas</h3>
     </section>
     <footer>
       <p>Conteúdo compilado por Tiago Esdras</p>
-    </footer>
-    <!--insira os elementos aqui-->
+    </footer>    
   </body>
 </html>
