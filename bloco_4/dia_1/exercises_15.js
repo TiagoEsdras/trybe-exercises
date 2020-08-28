@@ -67,13 +67,13 @@ else{
 if (salarioSemInss <= 1903.98){
     ir = 0;
 }
-else if (salarioSemInss > 1903.98  && salarioSemInss <= 2826.65){
+else if (salarioSemInss <= 2826.65){
     ir = (salarioSemInss * 0.075) - 142.80;
 }
-else if (salarioSemInss > 2826.65  && salarioSemInss <= 3751.05){
+else if (salarioSemInss <= 3751.05){
     ir = (salarioSemInss * 0.15) - 354.80;
 }
-else if (salarioSemInss > 3751.05  && salarioSemInss <= 4664.68){
+else if (salarioSemInss <= 4664.68){
     ir = (salarioSemInss * 0.225) - 636.13;
 }
 else{
