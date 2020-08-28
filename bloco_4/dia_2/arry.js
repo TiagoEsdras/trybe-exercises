@@ -51,11 +51,27 @@ else{
 
 //Utilizando for, descubra qual o maior valor contido no array e imprima-o;
 
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+/*let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let higherNumber = 0;
 for (let i = 0; i < numbers.length; i += 1) {
      if (numbers[i] > higherNumber){
          higherNumber = numbers[i];
      }  
 }
-console.log(higherNumber);
+console.log(higherNumber);*/
+
+/*Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";*/
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let oddNumbers = 0;
+for (let i = 0; i < numbers.length; i += 1) {
+     if (numbers[i] % 2 != 0){
+         oddNumbers += 1;
+     }  
+}
+if (oddNumbers == 0){
+    console.log(`Nenhum valor ímpar encontrado`)
+}
+else {
+    console.log(oddNumbers);
+}
