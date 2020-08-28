@@ -62,7 +62,7 @@ console.log(higherNumber);*/
 
 /*Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";*/
 
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+/*let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let oddNumbers = 0;
 for (let i = 0; i < numbers.length; i += 1) {
      if (numbers[i] % 2 != 0){
@@ -74,4 +74,15 @@ if (oddNumbers == 0){
 }
 else {
     console.log(oddNumbers);
+}*/
+
+//Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let smallerNumber = 1000;
+for (let i = 0; i < numbers.length; i += 1) {    
+     if (numbers[i] < smallerNumber){
+         smallerNumber = numbers[i];
+     }  
 }
+console.log(smallerNumber);
