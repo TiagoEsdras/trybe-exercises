@@ -90,6 +90,12 @@ console.log(smallerNumber);*/
 
 //Utilizando for, crie uma array que vá de 1 até 25 e imprima o resultado;
 
-for (i = 0; i < 25; i+= 1){
+/*for (i = 0; i < 25; i+= 1){
     console.log(i+1);
+}*/
+
+//Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
+
+for (i = 0; i < 25; i+= 1){
+    console.log((i+1) / 2);
 }
