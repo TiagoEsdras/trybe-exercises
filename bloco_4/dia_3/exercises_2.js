@@ -17,6 +17,5 @@ for (let i = 0; i < n; i += 1){
         outPut += "*";
     }
     console.log(outPut);
-    outPut = "";
-    console.log("\n");
+    outPut = "";    
 }
