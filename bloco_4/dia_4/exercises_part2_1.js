@@ -8,15 +8,28 @@ Retorno esperado: false
 
 function verificaPalindrome (word){
 
+    let palindromo = false;
+    let count = 0;
     for (let i = 0; i < word.length; i += 1){
-        if (word[i] == word[word.length -1]){
-            return true;
+        if (word.length % 2 == 0){
+            if (word[i] == word[word.length - 1 - i]){
+                count++;
+            }
+            if (count == word.length){
+                palindromo = true;
+            }
         }
         else {
-            return false;
-        }
+            if (word[i] == word[(word.length - 1) - i]){
+                count++;
+            }
+            if (count == word.length){
+                palindromo = true;
+            }
+        }        
     }
+    return palindromo;
 }
 
-console.log(verificaPalindrome("arara"));
+console.log(verificaPalindrome("socorrosubinoonibusorrocos"));
 console.log(verificaPalindrome("desenvolvimento"));
