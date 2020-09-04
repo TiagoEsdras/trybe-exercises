@@ -51,13 +51,18 @@
         }
         changeTextP('Este é o texto do exercício 1');
         //2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-        function changeColor (color){
+        function changeColor (color) {
           let a = document.getElementsByClassName('main-content')[0];
           a.style.backgroundColor = color;
           return a;
         }
          changeColor('rgb(76,164,109)');
         //3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        function changeColorSquare () {
+          let a = document.getElementsByClassName('center-content')[0];
+          a.style.backgroundColor = 'white';
+        }
+        changeColorSquare();
         //4. Crie uma função que corrija o texto da tag <h1>.
         //5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
