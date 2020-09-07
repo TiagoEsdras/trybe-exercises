@@ -76,7 +76,13 @@
         }
         pToUpperCase();
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        
+        function pExhibition () {
+          let p = document.getElementsByTagName('p');
+          for (let x in p) {
+            console.log(p[x].innerHTML);
+          }
+        }
+        pExhibition();
     </script>
   </body>
 </html>
