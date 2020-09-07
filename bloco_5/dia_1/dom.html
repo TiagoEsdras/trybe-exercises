@@ -65,10 +65,16 @@
         changeColorSquare();
         //4. Crie uma função que corrija o texto da tag <h1>.
         function changeH1 () {
-          let h1 = document.getElementsByClassName('title')[0].innerText = 'Exercício 5.1 - JavaScript';
+          document.getElementsByClassName('title')[0].innerText = 'Exercício 5.1 - JavaScript';
         }
         changeH1();
         //5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function pToUpperCase () {
+          let a = document.getElementsByTagName('p')[0];
+          a.innerHTML = a.innerHTML.toUpperCase();
+          return a;          
+        }
+        pToUpperCase();
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         
     </script>
