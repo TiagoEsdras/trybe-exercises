@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+                </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>
+    <script>
+        // Part 1
+        // 1° Acesse o elemento elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta');
+
+        // 2° Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        document.querySelector('#elementoOndeVoceEsta').parentNode.style.backgroundColor = 'green';
+
+        // 3° Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        document.querySelector('#primeiroFilhoDoFilho').innerText='Este é um teste';
+
+        // 4° Acesse o primeiroFilho a partir de pai.
+        document.querySelector('#pai').firstElementChild;
+
+        // 5° Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+        
+        // 6° Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').nextSibling;
+
+        // 7° Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+
+        // 8° Agora acesse o terceiroFilho a partir de pai.
+        document.querySelector('#pai').lastElementChild.previousElementSibling;
+
+        // Part 2
+        // 1° Crie um irmão para elementoOndeVoceEsta.
+        let paiDoElementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta').parentElement;
+        let part2_1 = document.createElement('div');
+        paiDoElementoOndeVoceEsta.appendChild(part2_1);
+
+        // 2° Crie um filho para elementoOndeVoceEsta.
+        let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+        let part2_2 = document.createElement('ol');
+        elementoOndeVoceEsta.appendChild(part2_2);
+
+        // 3° Crie um filho para primeiroFilhoDoFilho.
+        let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+        let part2_3 = document.createElement('ul');
+        primeiroFilhoDoFilho.appendChild(part2_3);
+
+        // 4° A partir desse filho criado, acesse terceiroFilho.
+        document.querySelector('ul').parentElement.parentElement.nextElementSibling;
+
+        // Part 3
+        //Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+        let removePrimeiroFilho = document.querySelector('#primeiroFilho');
+        removePrimeiroFilho.remove();
+
+        let pai = document.querySelector('#elementoOndeVoceEsta');
+        let filho = document.querySelector('#segundoEUltimoFilhoDoFilho');
+        pai.removeChild(filho);       
+
+        //document.querySelector('#elementoOndeVoceEsta').removeChild(document.querySelector('#segundoEUltimoFilhoDoFilho')); 
+
+
+        let removeTerceiroFilho = document.querySelector('#terceiroFilho');
+        removeTerceiroFilho.remove();
+
+        let removequartoEUltimoFilho = document.querySelector('#quartoEUltimoFilho');
+        removequartoEUltimoFilho.remove();
+
+        let removeOl = document.querySelector('ol');
+        removeOl.remove();
+
+        let removeUl = document.querySelector('Ul');
+        removeUl.remove();
+
+        let removeDiv = document.querySelector('#pai');
+        removeDiv.lastChild.remove();
+
+        let atancaoRemove = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+        atancaoRemove.remove();      
+
+        
+
+        let contentPaiDoPai = document.querySelector("#pai");
+        contentPaiDoPai.parentNode.remove();
+        let novoPai = document.createElement('div');
+        novoPai.className = "pai";
+        novoPai.innerHTML = contentPaiDoPai.innerHTML;
+        document.body.appendChild(novoPai);
+    </script>
+</body>
+</html>
