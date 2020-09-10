@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+  <script>
+      let img = document.querySelector('img');
+      img.style.left = '0px';
+      let walkForwards = true;      
+      function catWalk () {
+        let width = window.innerWidth - img.width;
+        let currentLeft = parseInt(img.style.left);
+        let midlle = (window.innerWidth / 2) - (img.width / 2) + 5;
+        if (walkForwards && currentLeft > width) {
+            walkForwards = false;
+        }
+        if (!walkForwards && currentLeft <= 0) {
+            walkForwards = true;
+        }        
+        if (walkForwards) {
+            img.style.left = (parseInt(img.style.left) + 10) + 'px';
+        }
+        else {
+            img.style.left = (parseInt(img.style.left) - 10) + 'px';
+        }                 
+      }
+      window.setInterval(catWalk, 50);
+  </script>
+  
+ </body>
+</html>
