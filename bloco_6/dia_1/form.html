@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Form Preject</title>
+</head>
+<body>
+    <form action="" class="formulario">
+        <fieldset>
+            <div class="nome">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" value="" required="required" maxlength="40">
+            </div>
+            <div class="email">   
+                <label for="email">Email</label>
+                <input type="email" id="email" value="" required="required" maxlength="50">
+            </div>
+            <div class="cpf">
+                <label for="cpf">CPF</label>
+                <input type="number" id="cpf" value="" required="required" maxlength="11">
+            </div>
+            <div class="endereco">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" value="" required="required" maxlength="200">
+            </div>
+            <div class="cidade">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" value="" required="required" maxlength="28">  
+            </div>
+            <div class="estado">
+                <label for="estado">Estado</label>
+                <input type="comboBox" id="estado" value="" required="required">
+            </div>
+            <div class="tipo">
+                <input type="radio" id="casa" name="tipo" value="casa" required="required">
+                <label for="casa">Casa</label>
+
+                <input type="radio" id="apartamento" name="tipo" value="apartamento" required="required">
+                <label for="apartamento">Apartamento</label>
+            </div>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
