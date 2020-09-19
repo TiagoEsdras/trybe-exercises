@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/bulma.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Form Preject</title>
 </head>
 <body>
-    <form action="" class="formulario">
-        <fieldset>
-            <div class="nome">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" required="required" maxlength="40">
+    <section class="section">
+        <div class="container">
+            <div class="field">
+                <label class="label" for="nome">Nome</label>        
+                <div class="control">
+                    <input class="input" type="text" id="nome" name="nome" maxlength="40" placeholder="Nome completo">
+                </div>
             </div>
-            <div class="email">   
-                <label for="email">Email</label>
-                <input type="email" id="email" required="required" maxlength="50">
-            </div>
-            <div class="cpf">
-                <label for="cpf">CPF</label>
-                <input type="number" id="cpf" required="required" maxlength="11">
-            </div>
-            <div class="endereco">
-                <label for="endereco">Endereço</label>
-                <input type="text" id="endereco" required="required" maxlength="200">
-            </div>
-            <div class="cidade">
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" required="required" maxlength="28">  
-            </div>
-            <div class="estado">
-                <label for="estado">Estado</label>
-                <select id="estado" required="required" placeholder="selecione...">
-            </div>
-            <div class="tipo">
-                <input type="radio" id="casa" name="tipo" value="casa" required="required">
-                <label for="casa">Casa</label>
 
-                <input type="radio" id="apartamento" name="tipo" value="apartamento" required="required">
-                <label for="apartamento">Apartamento</label>
+            <div class="field">
+                <label class="label" for="email">Email</label>
+                <div class="control">
+                    <input class="input" type="email" id="email" name="email" maxlength="50" placeholder="example@example.com">               
             </div>
-        </fieldset>
+            </div>
+
+            <div class="field">
+                <label class="label" for="cpf">CPF</label>
+                <div class="control">
+                    <input class="input" type="number" id="cpf" name="cpf" maxlength="11" placeholder="12312312312">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="endereco">Endereço</label>
+                <div class="control">
+                    <input class="input" type="text" id="endereco" name="endereco" maxlength="200" placeholder="Rua/Av:         N°:          Bairro:">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="cidade">Cidade</label>
+                <div class="control">
+                    <input class="input" type="text" id="cidade" name="cidade" maxlength="28" placeholder="Cidade">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="estado">Estado</label>
+                <div class="select">
+                    <select id="estado" name="estado">
+                        <option>Selecione</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Tipo</label>
+                <div class="control">
+                    <label class="radio" for="casa">
+                        <input type="radio" id="casa" name="tipo" value="casa" >
+                        Casa
+                    </label>
+                    <label class="radio" for="apartamento">
+                        <input type="radio" id="apartamento" name="tipo" value="apartamento" >
+                        Apartamento
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="section">
+
+    </section>
+    <form action="" class="formulario">
+        
         <fieldset>
             <div>
                 <label for="resumo">Resumo do currículo</label>
-                <input type="textarea" id="resumo" required="required" maxlength="1000">
+                <input type="textarea" name="resumo" maxlength="1000">
             </div>
             <div>
                 <label for="cargo">Cargo</label>
-                <input type="text" id="cargo" required="required" maxlength="40">
+                <input type="text" name="cargo" maxlength="40">
             </div>
             <div>
                 <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" required="required" maxlength="500">
+                <input type="text" name="descricao" maxlength="500">
             </div>
             <div>
                 <label for="data">Data</label>
-                <input type="text" id="data" required="required" maxlength="10" placeholder="dd/mm/aaaa">
+                <input type="text" name="data" maxlength="10" placeholder="dd/mm/aaaa">
             </div>
         </fieldset>
+        <button id="button" type="submit">Submit</button>
     </form>
+    
     <script src="script.js"></script>
     
 </body>
