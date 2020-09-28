@@ -1,0 +1,41 @@
+body {
+    margin: 20px;
+}
+h1 {
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 1,5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 25px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 800px){
+    body {
+        background-color: crimson;
+        margin: 50px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .figure {
+        display: flex;
+        flex-wrap: wrap;       
+    }
+
+    figure {
+        width: 40%;
+    }
+}

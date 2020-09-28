@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bulma.min.css" rel="stylesheet">
+    <link href="css/pikaday.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Form Preject</title>
+</head>
+<body>
+    <section class="section">
+        <form action="#" class="form js-form">
+            <div class="field">
+                <label class="label" for="nome">Nome</label>        
+                <div class="control">
+                    <input class="input form-control" type="text" id="nome" data-validate-field="name" name="nome">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="email">Email</label>
+                <div class="control form-group">
+                    <input class="input" type="email" id="email" data-validate-field="email" name="email" placeholder="example@example.com">               
+            </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="cpf">CPF</label>
+                <div class="control form-group">
+                    <input class="input" type="number" id="cpf" name="cpf" data-validate-field="document" maxlength="11" placeholder="12312312312">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="endereco">Endereço</label>
+                <div class="control">
+                    <input class="input" type="text" id="endereco" name="endereco" maxlength="200" placeholder="Rua/Av:         N°:          Bairro:">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="cidade">Cidade</label>
+                <div class="control">
+                    <input class="input" type="text" id="cidade" name="cidade" maxlength="28" placeholder="Cidade">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="estado">Estado</label>
+                <div class="select">
+                    <select id="estado" name="estado">
+                        <option>Selecione</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Tipo</label>
+                <div class="control">
+                    <label class="radio" for="casa">
+                        <input type="radio" id="casa" name="tipo" value="casa" >
+                        Casa
+                    </label>
+                    <label class="radio" for="apartamento">
+                        <input type="radio" id="apartamento" name="tipo" value="apartamento" >
+                        Apartamento
+                    </label>
+                </div>
+            </div>
+    <br>
+            <div class="field">
+                <label class="label" for="resumo">Resumo do currículo</label>
+            </div>
+            <div class="control">
+                <textarea class="textarea" id="resumo" placeholder="e.g. Hello world" maxlength="1000"></textarea>
+            </div>
+
+            <div class="field">
+                <label class="label" for="cargo">Cargo</label>
+                <div class="control">
+                    <input class="input" type="text" id="cargo" name="cargo" maxlength="40">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="descricao">Descrição</label>
+                <div class="control">
+                    <input class="input" id="descricao" type="text" name="descricao" maxlength="500">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="data">Data</label>
+                <div class="control">
+                    <input class="input" id="datepicker" autocomplete="off" type="text" name="data" maxlength="10" placeholder="dd/mm/aaaa">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary" id="submit" type="submit">Enviar</button>
+                </div>
+                <div class="control">
+                    <button class="button" id="clear">Clear</button>
+                </div>
+            </div>
+        </form>    
+    </section>
+    <table class="table is-fullwidth is-striped">
+        <thead>
+            <tr>
+                <th>Informações Pessoais</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr id="nome-input">
+            <td>Nome: </td>
+          </tr>
+          <tr id="email-input">
+            <td>Email: </td>
+          </tr>
+          <tr id="cpf-input">
+            <td>CPF: </td>
+          </tr>
+          <tr id="endereco-input">
+            <td>Endereço: </td>
+          </tr>
+          <tr id="cidade-input">
+            <td>Cidade: </td>
+          </tr>
+          <tr id="estado-input">
+            <td>Estado: </td>
+          </tr>
+          <tr id="tipo-input">
+            <td>Tipo: </td>
+          </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Informações Trabalho</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr id="resumo-input">
+            <td>Resumo: </td>
+          </tr>
+          <tr id="cargo-input">
+            <td>Cargo: </td>
+          </tr>
+          <tr id="descricao-input">
+            <td>Descrição: </td>
+          </tr>
+          <tr id="data-input">
+            <td>Data: </td>
+          </tr>
+        </tbody>
+    
+        
+      </table>
+    <script src="js/pikaday.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        new window.JustValidate('.form', {
+      rules: {
+        name: {
+          required: true,
+          maxLength: 40
+        },
+        email: {
+          required: true,
+          maxLength: 50
+        },
+        cpf: {
+          required: true,
+          maxLength: 11
+        },
+        address: {
+          required: true,
+          maxLength: 200
+        },
+        city: {
+          required: true,
+          maxLength: 28
+        },
+        estate: {
+          required: true
+        },
+        house: {
+          required: true
+        },
+        summary: {
+          required: true,
+          maxLength: 1000
+        },
+        position: {
+          required: true,
+          maxLength: 40
+        },
+        description: {
+          required: true,
+          maxLength: 500
+        },
+        date: {
+          required: true,
+          maxLength: 10
+        }
+      }
+    });
+    </script>
+</body>
+</html>
