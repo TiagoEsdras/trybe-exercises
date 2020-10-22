@@ -1,4 +1,4 @@
-//Dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas?
+//Agora, dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas?
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
   `${name} is ${value} ${measurementUnit} apart from the Sun`;
 
@@ -27,7 +27,6 @@ const jupiter = {
 };
 
 console.log(planetDistanceFromSun(mars)); // A
-console.log(planetDistanceFromSun(venus)); // B
-console.log(planetDistanceFromSun(jupiter)); // C
-
-// A ordem de finalização da execução será A, B, C pois todo o código será executado de forma síncrona
+setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
+setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
+// A ordem de finalização da execução será A, C, B, pois está configurado um setTimeOut de 3000ms para B, e 2000ms para C. Portanto A será executado de forma síncrona, depois C finalizará a execução, e por último B finaliza sua excecução.
