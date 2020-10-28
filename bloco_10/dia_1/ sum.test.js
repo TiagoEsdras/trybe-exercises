@@ -13,4 +13,10 @@ describe('sum', () => {
       sum(4, '5');
     }).toThrow();
   });
+
+  test('String error equal: parameters must be numbers', () => {
+    expect(() => {
+      sum(4, '5');
+    }).toThrow(/parameters must be numbers/);
+  });
 });
