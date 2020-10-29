@@ -13,4 +13,7 @@ describe('myFizzBuzz', () => {
   test('Calling myFizzBuzz(8) retunr must be 8', () => {
     expect(myFizzBuzz(8)).toBe(8);
   });
+  test('Calling myFizzBuzz("8") retunr must be false', () => {
+    expect(myFizzBuzz('8')).toBeFalsy();
+  });
 });
