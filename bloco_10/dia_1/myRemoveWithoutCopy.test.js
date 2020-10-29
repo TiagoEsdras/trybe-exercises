@@ -12,4 +12,7 @@ describe('myRemoveWithCopy', () => {
     myRemoveWithoutCopy(arr, 1);
     expect(arr).not.toEqual([arr]);
   });
+  test('Calling myRemoveWithoutCopy([1, 2, 3, 4], 5) retunr must be [1, 2, 3, 4]', () => {
+    expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
 });
