@@ -18,14 +18,16 @@ const getUserName = (userID) => {
 
 it('getUserName(4) return should be "Mark"', () => {
   expect.assertions(1);
-  return getUserName(4).then(name => {
+  return expect(getUserName(4)).resolves.toBe('Mark');
+  /*return getUserName(4).then(name => {
     expect(name).toBe('Mark');
-  });
+  });*/
 });
 
 it('returns an error', () => {
   expect.assertions(1);
-  return getUserName(2).catch(error =>
+  return expect(getUserName(2)).rejects.toEqual({ error: 'User with 2 not found.' });
+  /*return getUserName(2).catch(error =>
     expect(error).toEqual({ error: 'User with 2 not found.' })
-  );
+  );*/
 });
