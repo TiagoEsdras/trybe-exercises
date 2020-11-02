@@ -5,20 +5,36 @@ const Animals = [
 ];
 
 
-const findAnimalByName = (name) => (
-  // Adicione o código aqui.
-  new Promise((resolve, reject) => {
+const findAnimalByName = (name) => {
+  return (new Promise((resolve, reject) => {
     setTimeout(() => {
       const animal = Animals.find(animal => animal.name === name);
       if (animal) return resolve(animal);
       return reject('Nenhum animal com esse nome!');
     }, 100);
-  })
-)
+  }));
+}
 
 const getAnimal = (name) => {
   // Adicione o código aqui.
   return findAnimalByName(name).then(animal => animal);
+}
+
+const findAnimalByAge = (age) => {
+  return (new Promise((resolve, reject) => {
+      setTimeout(() => {
+          const animals = [];
+          Animals.forEach(animal => {
+              if (animal.age === age) animals.push(animal);
+          });
+          if (animals.length !== 0) return resolve(animals);
+          return reject('Nenhum animal com esse nome!');
+      },100);
+  }));
+}
+
+const getAnimalAge = (age) => {
+  return findAnimalByAge(age).then(animals => animals);
 }
 // ---------------------
 
@@ -37,6 +53,21 @@ describe('Testando promise - findAnimalByName', () => {
       expect.assertions(1);
       return getAnimal('Bob').catch(error =>
         expect(error).toEqual('Nenhum animal com esse nome!'));
+    });
+  });
+});
+
+describe('Testando promise - findAnimalByAge', () => {
+  test('Quando existir animais com a idade procurada', () => {
+    expect.assertions(1);
+    return getAnimalAge(1).then(animal => {
+        expect(animal).toEqual([{ name: 'Dorminhoco', age: 1, type: 'Dog' }])
+    });
+  });
+  test('Quando não existir animais com a idade procurada', () => {
+    expect.assertions(1);
+    return getAnimalAge(7).catch(erro => {
+        expect(erro).toBe('Nenhum animal com esse nome!')
     });
   });
 });
